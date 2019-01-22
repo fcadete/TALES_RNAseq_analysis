@@ -1,0 +1,19 @@
+GO.ID	Term	Annotated	Significant	Expected	Rank in Fisher.classic	Fisher.elim	Fisher.classic
+GO:0022610	biological adhesion	15	7	1.53	2	0.2836	0.00017
+GO:0007155	cell adhesion	15	7	1.53	3	0.2836	0.00017
+GO:0045785	positive regulation of cell adhesion	6	4	0.61	4	0.0011	0.00111
+GO:0006928	movement of cell or subcellular componen...	29	8	2.96	5	0.3424	0.00369
+GO:0030155	regulation of cell adhesion	8	4	0.82	6	1.0000	0.00448
+GO:0043010	camera-type eye development	8	4	0.82	7	0.2497	0.00448
+GO:0080134	regulation of response to stress	18	6	1.84	8	0.0048	0.00481
+GO:0051674	localization of cell	24	7	2.45	9	1.0000	0.00507
+GO:0048870	cell motility	24	7	2.45	10	0.0051	0.00507
+GO:0040011	locomotion	24	7	2.45	11	1.0000	0.00507
+GO:0007423	sensory organ development	9	4	0.92	12	0.3189	0.00751
+GO:0150063	visual system development	9	4	0.92	13	0.3189	0.00751
+GO:0048880	sensory system development	9	4	0.92	14	0.3189	0.00751
+GO:0001654	eye development	9	4	0.92	15	0.3189	0.00751
+GO:0048593	camera-type eye morphogenesis	5	3	0.51	16	0.0082	0.00822
+GO:0050954	sensory perception of mechanical stimulu...	5	3	0.51	17	0.0082	0.00822
+GO:0006644	phospholipid metabolic process	5	3	0.51	18	0.0082	0.00822
+GO:0048583	regulation of response to stimulus	47	10	4.8	19	0.1996	0.00837

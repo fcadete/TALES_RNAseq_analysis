@@ -1,0 +1,3 @@
+GO.ID	Term	Annotated	Significant	Expected	Rank in Fisher.classic	Fisher.elim	Fisher.classic
+GO:0046872	metal ion binding	30	8	3.56	1	0.0073	0.0073
+GO:0043169	cation binding	31	8	3.68	2	1.0000	0.0093

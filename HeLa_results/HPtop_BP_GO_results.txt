@@ -1,0 +1,62 @@
+GO.ID	Term	Annotated	Significant	Expected	Rank in Fisher.classic	Fisher.elim	Fisher.classic
+GO:0072376	protein activation cascade	9	6	1.04	15	1.0000	0.00012
+GO:0007155	cell adhesion	46	14	5.34	16	0.0102	0.00025
+GO:0022610	biological adhesion	46	14	5.34	17	0.0102	0.00025
+GO:0032101	regulation of response to external stimu...	27	10	3.13	18	0.1530	0.00038
+GO:0001568	blood vessel development	32	11	3.71	19	0.1222	0.00040
+GO:0001944	vasculature development	32	11	3.71	20	0.1222	0.00040
+GO:0072358	cardiovascular system development	32	11	3.71	21	0.1222	0.00040
+GO:0002697	regulation of immune effector process	15	7	1.74	22	0.5958	0.00062
+GO:0048646	anatomical structure formation involved ...	40	12	4.64	23	0.1716	0.00088
+GO:0048514	blood vessel morphogenesis	30	10	3.48	24	0.3577	0.00101
+GO:0016485	protein processing	12	6	1.39	25	1.0000	0.00102
+GO:0051604	protein maturation	12	6	1.39	26	1.0000	0.00102
+GO:0048731	system development	155	29	17.98	27	0.1764	0.00127
+GO:0001525	angiogenesis	26	9	3.02	28	0.0014	0.00137
+GO:0150063	visual system development	9	5	1.04	29	1.0000	0.00157
+GO:0048880	sensory system development	9	5	1.04	30	1.0000	0.00157
+GO:0001654	eye development	9	5	1.04	31	1.0000	0.00157
+GO:0002684	positive regulation of immune system pro...	32	10	3.71	32	0.2697	0.00178
+GO:0008284	positive regulation of cell proliferatio...	22	8	2.55	33	0.0018	0.00181
+GO:0002253	activation of immune response	22	8	2.55	34	0.4867	0.00181
+GO:0031347	regulation of defense response	27	9	3.13	35	0.3594	0.00187
+GO:0042476	odontogenesis	6	4	0.7	36	0.0021	0.00208
+GO:0048592	eye morphogenesis	6	4	0.7	37	0.0021	0.00208
+GO:0007275	multicellular organism development	177	31	20.54	38	0.1661	0.00268
+GO:0009888	tissue development	63	15	7.31	39	0.0027	0.00271
+GO:0070371	ERK1 and ERK2 cascade	14	6	1.62	40	0.3701	0.00275
+GO:0070372	regulation of ERK1 and ERK2 cascade	14	6	1.62	41	0.3701	0.00275
+GO:0072359	circulatory system development	45	12	5.22	42	0.3179	0.00280
+GO:0045785	positive regulation of cell adhesion	10	5	1.16	43	0.0029	0.00287
+GO:0070374	positive regulation of ERK1 and ERK2 cas...	10	5	1.16	44	0.0029	0.00287
+GO:0008283	cell proliferation	64	15	7.43	45	0.2431	0.00322
+GO:0035239	tube morphogenesis	40	11	4.64	46	0.4398	0.00329
+GO:0006954	inflammatory response	19	7	2.2	47	0.7444	0.00332
+GO:0035295	tube development	46	12	5.34	48	0.3484	0.00344
+GO:0009887	animal organ morphogenesis	35	10	4.06	49	0.4730	0.00380
+GO:0001822	kidney development	15	6	1.74	50	0.1749	0.00417
+GO:0001501	skeletal system development	15	6	1.74	51	0.0042	0.00417
+GO:0072001	renal system development	15	6	1.74	52	0.1749	0.00417
+GO:0050776	regulation of immune response	30	9	3.48	53	0.4507	0.00427
+GO:0007548	sex differentiation	7	4	0.81	54	0.0044	0.00442
+GO:0033002	muscle cell proliferation	7	4	0.81	55	0.0044	0.00442
+GO:0090596	sensory organ morphogenesis	7	4	0.81	56	1.0000	0.00442
+GO:0050778	positive regulation of immune response	25	8	2.9	57	0.5889	0.00460
+GO:0048584	positive regulation of response to stimu...	80	17	9.28	58	0.6119	0.00510
+GO:0032501	multicellular organismal process	225	36	26.1	59	0.3189	0.00558
+GO:0061061	muscle structure development	16	6	1.86	60	0.3713	0.00607
+GO:0001655	urogenital system development	16	6	1.86	61	0.2173	0.00607
+GO:0030155	regulation of cell adhesion	21	7	2.44	62	0.3405	0.00633
+GO:0042327	positive regulation of phosphorylation	38	10	4.41	63	0.1778	0.00733
+GO:0048608	reproductive structure development	12	5	1.39	64	0.0075	0.00748
+GO:0061458	reproductive system development	12	5	1.39	65	1.0000	0.00748
+GO:0007517	muscle organ development	12	5	1.39	66	0.0075	0.00748
+GO:0009653	anatomical structure morphogenesis	90	18	10.44	67	0.7164	0.00782
+GO:0048856	anatomical structure development	188	31	21.81	68	0.4124	0.00805
+GO:0008217	regulation of blood pressure	8	4	0.93	69	0.0081	0.00808
+GO:0072006	nephron development	8	4	0.93	70	0.0081	0.00808
+GO:0008015	blood circulation	17	6	1.97	71	0.2605	0.00853
+GO:0003013	circulatory system process	17	6	1.97	72	0.2605	0.00853
+GO:0048598	embryonic morphogenesis	17	6	1.97	73	0.0085	0.00853
+GO:0071345	cellular response to cytokine stimulus	33	9	3.83	74	0.0086	0.00861
+GO:0002682	regulation of immune system process	51	12	5.92	75	0.3210	0.00867

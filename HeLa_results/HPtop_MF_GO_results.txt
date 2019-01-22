@@ -1,0 +1,12 @@
+GO.ID	Term	Annotated	Significant	Expected	Rank in Fisher.classic	Fisher.elim	Fisher.classic
+GO:0038023	signaling receptor activity	31	11	3.46	3	0.02555	0.00019
+GO:0060089	molecular transducer activity	32	11	3.57	4	0.03798	0.00027
+GO:0005201	extracellular matrix structural constitu...	11	6	1.23	5	0.00045	0.00045
+GO:0008236	serine-type peptidase activity	9	5	1	6	1.00000	0.00130
+GO:0004252	serine-type endopeptidase activity	9	5	1	7	0.00130	0.00130
+GO:0017171	serine hydrolase activity	9	5	1	8	1.00000	0.00130
+GO:0001228	DNA-binding transcription activator acti...	18	7	2.01	9	0.00181	0.00181
+GO:0004888	transmembrane signaling receptor activit...	24	8	2.68	10	0.00263	0.00263
+GO:0050839	cell adhesion molecule binding	32	9	3.57	11	0.42295	0.00521
+GO:0000977	RNA polymerase II regulatory region sequ...	22	7	2.45	12	0.00672	0.00672
+GO:0001012	RNA polymerase II regulatory region DNA ...	23	7	2.57	13	1.00000	0.00882
