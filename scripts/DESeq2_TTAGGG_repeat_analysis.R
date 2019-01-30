@@ -69,11 +69,9 @@ geneSeqs <- getSeq(Dna, genes_in_data)
 
 for (number_reps in 1:5) {
 
-  gene_telrep_matches <- vmatchPattern(paste(rep("TTAGGG", number_reps), collapse = ""), geneSeqs)
+  gene_telrep_matches <- vcountPattern(paste(rep("TTAGGG", number_reps), collapse = ""), geneSeqs, max.mismatch=1*number_reps)
 
-  gene_telrep_number_matches <- unlist(lapply(gene_telrep_matches, length))
-
-  gene_telreps[[paste0("telrep_matches_", number_reps)]] <- gene_telrep_number_matches
+  gene_telreps[[paste0("telrep_matches_", number_reps)]] <- gene_telrep_matches
 
 }
 
@@ -245,11 +243,9 @@ promoter_telreps$genes_HP <- promoter_telreps$gene_ID %in% genes_HP
 
 for (number_reps in 1:5) {
 
-  promoter_telrep_matches <- vmatchPattern(paste(rep("TTAGGG", number_reps), collapse = ""), promoterSeqs)
+  promoter_telrep_matches <- vcountPattern(paste(rep("TTAGGG", number_reps), collapse = ""), promoterSeqs, max.mismatch=1*number_reps)
 
-  promoter_telrep_number_matches <- unlist(lapply(promoter_telrep_matches, length))
-
-  promoter_telreps[[paste0("promoter_telrep_matches_", number_reps)]] <- promoter_telrep_number_matches
+  promoter_telreps[[paste0("promoter_telrep_matches_", number_reps)]] <- promoter_telrep_matches
 
 }
 
@@ -317,7 +313,7 @@ exon_sequences <- lapply(exons_in_data, function(x) getSeq(Dna, x))
 exon_matches <- t(sapply(exon_sequences, function(x) {
 
      sapply(1:5, function(e) {
-              telrep_matches <- vmatchPattern(paste(rep("TTAGGG", e), collapse = ""), x)
+              telrep_matches <- vmatchPattern(paste(rep("TTAGGG", e), collapse = ""), x, max.mismatch=1*number_reps)
               sum(unlist(lapply(telrep_matches, length)))})
 
 }))
@@ -393,7 +389,7 @@ utr5_sequences <- lapply(utr5_ranges_reduced, function(x) getSeq(Dna, x))
 
 utr5_matches <- t(sapply(utr5_sequences, function(x) {
      sapply(1:5, function(e) {
-              telrep_matches <- vmatchPattern(paste(rep("TTAGGG", e), collapse = ""), x)
+              telrep_matches <- vmatchPattern(paste(rep("TTAGGG", e), collapse = ""), x, max.mismatch=1*number_reps)
               sum(unlist(lapply(telrep_matches, length)))})
 }))
 
@@ -455,7 +451,7 @@ utr3_sequences <- lapply(utr3_ranges_reduced, function(x) getSeq(Dna, x))
 
 utr3_matches <- t(sapply(utr3_sequences, function(x) {
      sapply(1:5, function(e) {
-              telrep_matches <- vmatchPattern(paste(rep("TTAGGG", e), collapse = ""), x)
+              telrep_matches <- vmatchPattern(paste(rep("TTAGGG", e), collapse = ""), x, max.mismatch=1*number_reps)
               sum(unlist(lapply(telrep_matches, length)))})
 }))
 

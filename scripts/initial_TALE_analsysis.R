@@ -204,9 +204,9 @@ library("topGO")
 
 library("gplots")
 
-for (sample in c("AD6", "SID4")) {
+do_GO_analysis <- function(results_object, genes_object, sample, direction) {
 
-for (direction in c("all", "up", "down")) {
+ensembl <- useMart("ensembl", dataset = "hsapiens_gene_ensembl")
 
 genes_names <- getBM(attributes = c('external_gene_name',
                                 'description',
@@ -217,11 +217,11 @@ genes_names <- getBM(attributes = c('external_gene_name',
                                 'strand'
                                 ),
                  filters = 'ensembl_gene_id',
-                 values = get(paste0("genes_", direction, "_", sample)),
+                 values = genes_object,
                  mart = ensembl)
 
 genes_names <- cbind(genes_names,
-                           as.data.frame(get(paste0("results_", sample))[genes_names$ensembl_gene_id,]))
+                           as.data.frame(results_object[genes_names$ensembl_gene_id,]))
 
 genes_names <- genes_names %>% arrange(padj)
 
@@ -231,9 +231,9 @@ write_tsv(genes_names,
 # GO analysis
 
 # Trying to more explicitly compare genes with similar distribution of expression
-overallBaseMean <- as.matrix(get(paste0("results_", sample))[, "baseMean", drop = F])
+overallBaseMean <- as.matrix(results_object[, "baseMean", drop = F])
 
-sig_idx <- match(get(paste0("genes_", direction, "_", sample)), rownames(overallBaseMean))
+sig_idx <- match(genes_object, rownames(overallBaseMean))
 
 backG <- c()
 
@@ -247,14 +247,14 @@ backG <- unique(backG)
 backG <- rownames(overallBaseMean)[backG]
 
 multidensity( list(
-  all= log2(get(paste0("results_", sample))[is.na(get(paste0("results_", sample))$padj) == FALSE ,"baseMean"]) ,
-  foreground =log2(get(paste0("results_", sample))[get(paste0("genes_", direction, "_", sample)), "baseMean"]),
-  background =log2(get(paste0("results_", sample))[backG, "baseMean"])),
+  all= log2(results_object[is.na(results_object$padj) == FALSE ,"baseMean"]) ,
+  foreground =log2(results_object[genes_object, "baseMean"]),
+  background =log2(results_object[backG, "baseMean"])),
   xlab="log2 mean normalized counts", main = "Matching for enrichment analysis")
 
 geneIDs = rownames(overallBaseMean)
-inUniverse = geneIDs %in% c(get(paste0("genes_", direction, "_", sample)),  backG)
-inSelection =  geneIDs %in% get(paste0("genes_", direction, "_", sample))
+inUniverse = geneIDs %in% c(genes_object,  backG)
+inSelection =  geneIDs %in% genes_object
 alg <- factor( as.integer( inSelection[inUniverse] ) )
 names(alg) <- geneIDs[inUniverse]
 
@@ -305,7 +305,22 @@ write.table(allRes.MF %>% filter(Fisher.classic < 0.01),
             file = paste0("U2OS_results/", sample, "_", direction, "_top_MF_GO_results.txt"),
             sep = "\t", col.names = TRUE, row.names = FALSE, quote = FALSE)
 
+}
+
+for (sample in c("AD6", "SID4")) {
+
+	for (direction in c("all", "up", "down")) {
+
+		do_GO_analysis(get(paste0("results_", sample)), get(paste0("genes_", direction, "_", sample)), sample, direction)
+
+	}
 
 }
 
-}
+do_GO_analysis(results_AD6, intersect(genes_up_AD6, genes_down_SID4),
+               "AD6", "up_AD6_down_SID4")
+
+do_GO_analysis(results_AD6, intersect(genes_down_AD6, genes_up_SID4),
+               "AD6", "down_AD6_up_SID4")
+
+
